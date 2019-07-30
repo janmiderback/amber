@@ -1,11 +1,11 @@
-use std::io::Write;
+use std::io::{self, Write};
 
 fn main() {
     loop {
         print!("> ");
-        std::io::stdout().flush().unwrap();
+        io::stdout().flush().unwrap();
         let mut buffer = String::new();
-        std::io::stdin().read_line(&mut buffer).unwrap();
+        io::stdin().read_line(&mut buffer).unwrap();
         println!("{}", buffer);
     }
 }
